@@ -16,8 +16,8 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Automated Change
-          commit_user_name: github-actions[bot] 
-          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com 
+          commit_user_name: saiftyaagi
+          commit_user_email: saiftyagi98@gmail.com  
           file_pattern: '*.txt'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: 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
