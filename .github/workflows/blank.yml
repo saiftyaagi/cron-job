@@ -7,6 +7,9 @@ on:
 jobs:
   Dhananjay-CRON-Job:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # To push a branch 
+      pull-requests: write  # To create a PR from that branch
     steps:
       - run: echo "Action By Dhananjay"
       - uses: actions/checkout@v3
