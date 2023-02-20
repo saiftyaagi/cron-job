@@ -1,0 +1,23 @@
+name: Git Farmer 
+ run-name: Auto Commiter 
+ on:  
+   workflow_dispatch: 
+   schedule: 
+     - cron: '0 0 * * *' 
+ jobs: 
+   Dhananjay-CRON-Job: 
+     runs-on: ubuntu-latest 
+     steps: 
+       - run: echo "Action By Dhananjay" 
+       - uses: actions/checkout@v3 
+       - run: ls 
+       - run: echo $RANDOM | md5sum | head -c 20 > $RANDOM.txt 
+       - name: Setup Profile Container 
+         uses: stefanzweifel/git-auto-commit-action@v4 
+         with: 
+           commit_message: Automated Change 
+           commit_user_name: saiftyaagi 
+           commit_user_email: saiftyagi98@gmail.com 
+           file_pattern: '*.txt' 
+         env: 
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
