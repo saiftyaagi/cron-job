@@ -16,7 +16,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Automated Change
-          commit_user_name: saiftyagi
+          commit_user_name: saiftyaagi 
           commit_user_email: saiftyagi98@gmail.com 
           file_pattern: '*.txt'
         env:
